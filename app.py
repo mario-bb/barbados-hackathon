@@ -5,10 +5,10 @@ import os
 # third party
 import dash
 import dash_bootstrap_components as dbc
-import dotenv
+# import dotenv
 
 
-dotenv.load_dotenv()
+# dotenv.load_dotenv()
 # enable logging
 logging.basicConfig(level=logging.INFO)
 
