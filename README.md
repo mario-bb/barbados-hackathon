@@ -6,33 +6,23 @@ This README specifically refers to how to develop your app.
 
 ## Contents
 
-- [Pre-requisites](#pre-requisites)
-- [1. Creating your Python Virtual Environment](#1-create-your-virtual-environment-and-installing-app-dependencies)
+- [1. Installing app dependencies](#1-installing-app-dependencies)
 - [2. Developing your app](#2-developing-your-app)
+
+
+## 1. Installing app dependencies
+
+A python `requirements.txt` file is provided to install with the standard packages that we use.
+
+```
+pip install -r requirements.txt`
+```
+
+### Python Virtual Environment - optional alternative
 
 Throughout these instructions, we will use `Makefile` commands, that have been built to simplify the process. You can open the `Makefile` to see what is happening under the hood of each command
 
-## Pre-requisites
-
-- There are a number of packages you need to install when you set up cloud10 for the first time. To install these run: `make brew`
-- You can find the list of individual packages in `Brewfile`
-- To install the correct python version and python dependencies run: `make setup`
-
-## 1. Create your virtual environment and installing app dependencies
-
-#### Setting up your .env file
-
-First you have to duplicate the `.env.example` file and rename it to `.env`. This can be done with the command below.
-
-```
-cp .env.example .env
-```
-
-#### Your Python Virtual Environment
-
 Virtual environments help make sure that apps on your computer work as intended on someone elses.
-
-A python `requirements.txt` file is provided to install with the standard packages that we use.
 
 You can create the virtual environment and install the project packages by running:
 
@@ -50,6 +40,7 @@ Other useful commands:
 
 - `make reqs` - This installs the packages in `requirements.txt` and should only be run inside a virtual environment.
 - `deactivate` - This exits the current virtual environment.
+
 
 ## 2. Developing your app
 
