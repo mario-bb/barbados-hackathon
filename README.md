@@ -17,6 +17,8 @@ Python installed on your machine.
 
 Or PyEnv which allows you to install different versions of python.
 
+Regardless we recommend a python version > 3.9
+
 
 ## 1. Create your virtual environment and installing app dependencies
 
