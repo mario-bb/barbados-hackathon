@@ -13,10 +13,10 @@ This README specifically refers to how to develop your app.
 Throughout these instructions, we will use `Makefile` commands, that have been built to simplify the process. You can open the `Makefile` to see what is happening under the hood of each command
 
 ## Pre-requisites
+Python installed on your machine.
 
-- There are a number of packages you need to install when you set up cloud10 for the first time. To install these run: `make brew`
-- You can find the list of individual packages in `Brewfile`
-- To install the correct python version and python dependencies run: `make setup`
+Or PyEnv which allows you to install different versions of python.
+
 
 ## 1. Create your virtual environment and installing app dependencies
 
