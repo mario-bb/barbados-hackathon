@@ -1,6 +1,6 @@
 # third party
 import plotly.express as px
-
+import plotly.graph_objects as go
 
 def life_exp_scatter(df):
     fig = px.scatter(
@@ -16,4 +16,18 @@ def life_exp_scatter(df):
 
     fig.update_layout(transition_duration=500)
 
+    return fig
+
+
+def plot_employment_map(df, geojson_df):
+    fig = px.choropleth(
+        df, geojson=geojson_df, 
+        locations='Parish', 
+        color='Worked',
+        featureidkey="properties.name",
+        color_continuous_scale="Viridis",
+        fitbounds='locations',
+        labels={'Worked':'worked'}
+        )
+    
     return fig
