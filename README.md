@@ -6,8 +6,17 @@ This README specifically refers to how to develop your app.
 
 ## Contents
 
+- [Pre-requisites](#pre-requisites)
 - [1. Installing app dependencies](#1-installing-app-dependencies)
 - [2. Developing your app](#2-developing-your-app)
+
+
+## Pre-requisites
+Python installed on your machine.
+
+Or PyEnv which allows you to install different versions of python.
+
+Regardless we recommend a python version > 3.9
 
 
 ## 1. Installing app dependencies
