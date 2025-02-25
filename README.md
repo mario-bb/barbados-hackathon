@@ -24,7 +24,7 @@ Regardless we recommend a python version > 3.9
 A python `requirements.txt` file is provided to install with the standard packages that we use.
 
 ```
-pip install -r requirements.txt`
+pip install -r requirements.txt
 ```
 
 ### Python Virtual Environment - optional alternative
