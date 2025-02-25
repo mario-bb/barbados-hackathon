@@ -23,11 +23,13 @@ def plot_employment_map(df, geojson_df):
     fig = px.choropleth(
         df, geojson=geojson_df, 
         locations='Parish', 
-        color='Worked',
+        color='worked_percentage',
         featureidkey="properties.name",
         color_continuous_scale="Viridis",
-        fitbounds='locations',
-        labels={'Worked':'worked'}
+        labels={'worked_percentage':'% Worked'},
+        fitbounds="locations",
         )
     
+    fig.update_traces(hovertemplate="%{location}: %{z:.1f}%")
+
     return fig

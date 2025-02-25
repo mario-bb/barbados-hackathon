@@ -11,12 +11,14 @@ from .functions.graphs import life_exp_scatter, plot_employment_map
 
 df = import_data("gapminder.csv")
 
+# geojson file of parish shapes from https://simplemaps.com/gis/country/bb (I edited the parish names to match the data file, Saint -> St.)
 with open("data/bb.json") as file:
     barbados_parish_geojson = json.loads(file.read())
 
-
+# Census data from https://stats.gov.bb/statistics/data/
 bb_employment = import_data("barbados_census_working.csv")
 parish_employment =bb_employment[bb_employment['Parish']!='Barbados']
+parish_employment["worked_percentage"] = parish_employment["Worked"] / parish_employment["Total"] * 100
 
 dashboard_layout = [
     dmc.Grid(
@@ -59,8 +61,8 @@ dashboard_layout = [
             ),
             dmc.GridCol(
                 [
-                    dcc.Graph(id="map", className="pr-5"),
                     dcc.Dropdown(['Male', 'Female', 'Both Sexes'], 'Both Sexes', id='sex-selector', className="pr-5"),
+                    dcc.Graph(id="map", className="pr-5"),
                 ],
                 span=8
             )
@@ -74,7 +76,6 @@ dashboard_layout = [
 def update_figure(selected_year):
     filtered_df = df[df.year == selected_year]
     fig = life_exp_scatter(filtered_df)
-
     return fig
 
 
