@@ -22,7 +22,6 @@ Brewfile.lock.json
 .charts
 
 # Data
-*.csv
 *.xlsx
 *.xls
 *.pkl
