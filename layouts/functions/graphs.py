@@ -3,9 +3,6 @@ import plotly.express as px
 import pandas as pd
 
 def math_scores_box_plot(df):
-    """
-    Creates a full-width box plot comparing Mathematics raw scores across parishes for each year.
-    """
     fig = px.box(
         df,
         x="examYear",
